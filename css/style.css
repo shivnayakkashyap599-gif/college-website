@@ -181,27 +181,54 @@ margin:15px auto;
 }
 
 /* ================= ABOUT ================= */
-<!-- About Section -->
+/* ===========================
+   ABOUT SECTION
+=========================== */
 
-<section class="about">
+.about{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+    padding:80px 8%;
+    background:#f8f9fa;
+    flex-wrap:wrap;
+}
 
-<div class="about-img">
-    <img src="images/about.jpg" alt="College">
-</div>
+.about-img{
+    flex:1;
+    min-width:300px;
+}
 
-<div class="about-content">
+.about-img img{
+    width:100%;
+    max-width:500px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    transition:.5s;
+}
 
-    <h2>About Shri Shakti Degree College</h2>
+.about-img img:hover{
+    transform:scale(1.05);
+}
 
-    <p>
-        Shri Shakti Degree College, Sankhahari, Ghatampur, Kanpur Nagar is committed to providing quality education with experienced faculty, modern classrooms, computer labs, library, sports facilities, NCC and a disciplined learning environment.
-    </p>
+.about-content{
+    flex:1;
+    min-width:300px;
+}
 
-    <a href="about.html" class="btn">Read More</a>
+.about-content h2{
+    font-size:38px;
+    color:#003366;
+    margin-bottom:20px;
+}
 
-</div>
-
-</section>
+.about-content p{
+    font-size:18px;
+    line-height:1.8;
+    color:#555;
+    margin-bottom:25px;
+}
 
 /* ================= COURSES ================= */
 
