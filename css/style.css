@@ -1,208 +1,211 @@
-/* ===============================
+/* ==========================================
    SHRI SHAKTI DEGREE COLLEGE
-   style.css (Part 1)
-==================================*/
+   STYLE.CSS - PART 1
+========================================== */
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f4f7fb;
-color:#222;
-line-height:1.6;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.6;
 }
 
-/* ================= NAVBAR ================= */
+/* ================= HEADER ================= */
 
 header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:#003b8f;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 8%;
-z-index:999;
-box-shadow:0 3px 10px rgba(0,0,0,.2);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#003b8f;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    z-index:999;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
 }
 
+/* Logo */
+
 .logo{
-display:flex;
-align-items:center;
-gap:15px;
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
 .logo img{
-width:60px;
-height:60px;
-border-radius:50%;
-background:#fff;
-padding:5px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#fff;
+    padding:5px;
 }
 
 .logo h2{
-font-size:24px;
-color:#fff;
-font-weight:bold;
+    color:#fff;
+    font-size:24px;
+    font-weight:bold;
 }
 
+/* Navbar */
+
 nav ul{
-display:flex;
-list-style:none;
-gap:30px;
+    list-style:none;
+    display:flex;
+    gap:30px;
 }
 
 nav ul li a{
-text-decoration:none;
-color:#fff;
-font-size:17px;
-font-weight:600;
-transition:.3s;
+    text-decoration:none;
+    color:#fff;
+    font-size:17px;
+    font-weight:bold;
+    transition:.3s;
 }
 
 nav ul li a:hover{
-color:#ffd700;
+    color:#ffd700;
 }
 
-/* ================= HERO ================= */
+/* ================= HERO SLIDER ================= */
 
 .hero{
-    background:url("../images/bj.jpg") center center/cover no-repeat;
+    position:relative;
+    width:100%;
     height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    overflow:hidden;
+    margin-top:95px;
+}
+
+.slider{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease;
+}
+
+.slide.active{
+    opacity:1;
 }
 
 .overlay{
+    position:absolute;
+    top:0;
+    left:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.5);
+    background:rgba(0,0,0,.45);
+
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
+
     text-align:center;
-    color:white;
+    color:#fff;
+    z-index:10;
 }
 
 .overlay h1{
     font-size:60px;
-    margin-bottom:10px;
+    letter-spacing:2px;
 }
 
 .overlay h2{
-    font-size:45px;
-    margin-bottom:15px;
+    font-size:42px;
+    color:#ffd700;
+    margin:15px 0;
 }
 
 .overlay p{
     font-size:22px;
 }
 
-.overlay{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.55);
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.overlay h1{
-font-size:65px;
-color:#fff;
-letter-spacing:3px;
-margin-bottom:15px;
-}
-
-.overlay h2{
-font-size:42px;
-color:#ffd700;
-margin-bottom:15px;
-}
-
-.overlay p{
-font-size:22px;
-color:#fff;
-margin-bottom:35px;
-}
-
 .btn{
-background:#ffd700;
-color:#000;
-padding:15px 35px;
-text-decoration:none;
-font-size:18px;
-font-weight:bold;
-border-radius:40px;
-transition:.3s;
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 32px;
+    background:#ff9800;
+    color:#fff;
+    text-decoration:none;
+    border-radius:40px;
+    transition:.3s;
 }
 
 .btn:hover{
-background:#fff;
-transform:scale(1.05);
+    background:#fff;
+    color:#000;
+    transform:scale(1.05);
 }
 
-/* ================= SECTION ================= */
+/* ================= COMMON SECTION ================= */
 
 section{
-padding:80px 8%;
+    padding:80px 8%;
 }
 
 section h2{
-font-size:38px;
-color:#003b8f;
-text-align:center;
-margin-bottom:40px;
-position:relative;
+    text-align:center;
+    color:#003b8f;
+    font-size:38px;
+    margin-bottom:40px;
 }
 
 section h2::after{
-content:"";
-width:100px;
-height:4px;
-background:#ffd700;
-display:block;
-margin:15px auto;
+    content:"";
+    display:block;
+    width:100px;
+    height:4px;
+    background:#ff9800;
+    margin:12px auto;
 }
+/* ==========================================
+   PART 2
+   ABOUT + NEWS + COURSES + MANAGER
+========================================== */
 
 /* ================= ABOUT ================= */
-/* ===========================
-   ABOUT SECTION
-=========================== */
 
 .about{
     display:flex;
     align-items:center;
     justify-content:center;
     gap:50px;
-    padding:80px 8%;
-    background:#f8f9fa;
     flex-wrap:wrap;
+    background:#f8f9fa;
 }
 
 .about-img{
     flex:1;
-    min-width:300px;
+    min-width:320px;
 }
 
 .about-img img{
     width:100%;
     max-width:500px;
+    display:block;
+    margin:auto;
     border-radius:15px;
     box-shadow:0 10px 25px rgba(0,0,0,.2);
     transition:.5s;
@@ -214,109 +217,245 @@ margin:15px auto;
 
 .about-content{
     flex:1;
-    min-width:300px;
+    min-width:320px;
 }
 
 .about-content h2{
-    font-size:38px;
-    color:#003366;
+    color:#003b8f;
+    font-size:36px;
     margin-bottom:20px;
 }
 
 .about-content p{
     font-size:18px;
-    line-height:1.8;
     color:#555;
+    line-height:1.8;
     margin-bottom:25px;
+}
+
+/* ================= NEWS ================= */
+
+.news{
+    background:#eef4ff;
+}
+
+.news-box{
+    width:80%;
+    height:220px;
+    margin:auto;
+    background:#fff;
+    border-left:6px solid #ff9800;
+    border-radius:10px;
+    padding:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.news-box marquee{
+    height:180px;
+}
+
+.news-box p{
+    padding:12px 0;
+    border-bottom:1px solid #ddd;
+    font-size:18px;
 }
 
 /* ================= COURSES ================= */
 
 .course-box{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
 }
 
 .course-box div{
-background:#fff;
-padding:40px;
-border-radius:12px;
-text-align:center;
-font-size:24px;
-font-weight:bold;
-color:#003b8f;
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-transition:.3s;
-cursor:pointer;
+    background:#fff;
+    padding:40px;
+    text-align:center;
+    border-radius:12px;
+    font-size:24px;
+    font-weight:bold;
+    color:#003b8f;
+    cursor:pointer;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
 .course-box div:hover{
-background:#003b8f;
-color:#fff;
-transform:translateY(-10px);
+    background:#003b8f;
+    color:#fff;
+    transform:translateY(-10px);
 }
 
 /* ================= MANAGER ================= */
 
 .manager{
-background:#003b8f;
-text-align:center;
-color:#fff;
+    background:#003b8f;
+    color:#fff;
+    text-align:center;
 }
 
 .manager h2{
-color:#fff;
+    color:#fff;
 }
 
 .manager h2::after{
-background:#ffd700;
+    background:#ffd700;
 }
 
 .manager h3{
-font-size:34px;
-margin-top:20px;
-color:#ffd700;
+    font-size:34px;
+    color:#ffd700;
+    margin-top:20px;
+}
+/* ==========================================
+   PART 3
+   GALLERY + CONTACT + FOOTER
+========================================== */
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    background:#eef3fa;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    cursor:pointer;
+    transition:.4s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* ================= LIGHTBOX ================= */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.lightbox-img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:12px;
+    box-shadow:0 0 25px #fff;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:35px;
+    color:#fff;
+    font-size:45px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
 /* ================= CONTACT ================= */
 
 .contact{
-background:#fff;
+    background:#fff;
+    text-align:center;
 }
 
 .contact p{
-text-align:center;
-font-size:22px;
-margin:18px 0;
+    font-size:22px;
+    margin:18px 0;
 }
 
 .contact i{
-color:#003b8f;
-margin-right:10px;
+    color:#003b8f;
+    margin-right:10px;
+}
+
+/* ================= GOOGLE MAP ================= */
+
+.map iframe{
+    width:100%;
+    height:450px;
+    border:none;
+    border-radius:12px;
+    margin-top:25px;
 }
 
 /* ================= FOOTER ================= */
 
 footer{
-background:#001d46;
-padding:25px;
-text-align:center;
-color:#fff;
-font-size:17px;
+    background:#001d46;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+    font-size:17px;
 }
 
-/* ================= ANIMATION ================= */
+/* ================= WHATSAPP ================= */
 
-.course-box div,
-.btn{
-transition:.4s ease;
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+    transition:.3s;
+    z-index:999;
 }
 
-section{
-animation:fadeUp .8s ease;
+.whatsapp:hover{
+    transform:scale(1.1);
 }
+
+/* ================= SCROLL TOP ================= */
+
+#topBtn{
+    position:fixed;
+    right:22px;
+    bottom:95px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#003b8f;
+    color:#fff;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    font-size:22px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    z-index:999;
+}
+/* ==========================================
+   PART 4
+   ANIMATION + RESPONSIVE
+========================================== */
+
+/* ============ Animation ============ */
 
 @keyframes fadeUp{
 
@@ -331,226 +470,31 @@ transform:translateY(0);
 }
 
 }
-/* ===========================
-   GALLERY
-=========================== */
 
-.gallery{
-padding:80px 8%;
-background:#eef3fa;
+section{
+animation:fadeUp .8s ease;
 }
 
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.gallery-grid img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,.15);
-transition:.4s;
-cursor:pointer;
-}
-
-.gallery-grid img:hover{
-transform:scale(1.05);
-}
-
-/* ===========================
-NOTICE BOARD
-=========================== */
-
-.notice{
-padding:80px 8%;
-background:#fff;
-}
-
-.notice-box{
-background:#003b8f;
-color:#fff;
-padding:30px;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,.15);
-}
-
-.notice-box h3{
-font-size:28px;
-margin-bottom:20px;
-color:#ffd700;
-}
-
-.notice-box ul{
-padding-left:20px;
-}
-
-.notice-box li{
-margin:12px 0;
-font-size:18px;
-}
-
-/* ===========================
-FACULTY
-=========================== */
-
-.faculty{
-padding:80px 8%;
-background:#f8f8f8;
-}
-
-.faculty-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
+.btn,
+.course-box div,
+.gallery-grid img,
+.about-img img,
 .faculty-card{
-background:#fff;
-padding:25px;
-text-align:center;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,.1);
-transition:.3s;
+transition:.4s ease;
 }
 
+/* Hover Effects */
+
+.course-box div:hover,
 .faculty-card:hover{
 transform:translateY(-10px);
 }
 
-.faculty-card img{
-width:120px;
-height:120px;
-border-radius:50%;
-margin-bottom:15px;
+.btn:hover{
+transform:scale(1.05);
 }
 
-.faculty-card h3{
-color:#003b8f;
-margin-bottom:10px;
-}
-
-.faculty-card p{
-font-size:16px;
-}
-
-/* ===========================
-ADMISSION FORM
-=========================== */
-
-.admission{
-padding:80px 8%;
-background:#fff;
-}
-
-.admission form{
-max-width:900px;
-margin:auto;
-background:#fff;
-padding:35px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,.1);
-}
-
-.admission input,
-.admission select,
-.admission textarea{
-width:100%;
-padding:15px;
-margin:12px 0;
-border:1px solid #ccc;
-border-radius:8px;
-font-size:16px;
-outline:none;
-}
-
-.admission input:focus,
-.admission select:focus,
-.admission textarea:focus{
-border-color:#003b8f;
-}
-
-.admission button{
-background:#003b8f;
-color:#fff;
-padding:15px;
-width:100%;
-border:none;
-border-radius:8px;
-font-size:18px;
-cursor:pointer;
-transition:.3s;
-}
-
-.admission button:hover{
-background:#ffd700;
-color:#000;
-}
-
-/* ===========================
-GOOGLE MAP
-=========================== */
-
-.map iframe{
-width:100%;
-height:450px;
-border:none;
-border-radius:12px;
-margin-top:30px;
-}
-
-/* ===========================
-WHATSAPP BUTTON
-=========================== */
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-width:60px;
-height:60px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:32px;
-color:#fff;
-text-decoration:none;
-box-shadow:0 8px 20px rgba(0,0,0,.3);
-z-index:999;
-transition:.3s;
-}
-
-.whatsapp:hover{
-transform:scale(1.1);
-}
-
-/* ===========================
-SCROLL TOP
-=========================== */
-
-#topBtn{
-position:fixed;
-bottom:95px;
-right:22px;
-background:#003b8f;
-color:#fff;
-padding:15px;
-border-radius:50%;
-cursor:pointer;
-display:none;
-font-size:20px;
-z-index:999;
-}
-
-/* ===========================
-RESPONSIVE
-=========================== */
+/* ============ Tablet ============ */
 
 @media(max-width:991px){
 
@@ -559,59 +503,118 @@ flex-direction:column;
 padding:15px;
 }
 
-nav ul{
+.logo{
 flex-direction:column;
 text-align:center;
-gap:15px;
-margin-top:15px;
 }
 
 .logo h2{
-font-size:18px;
+font-size:20px;
+}
+
+nav ul{
+flex-direction:column;
+gap:15px;
+margin-top:15px;
+text-align:center;
 }
 
 .hero{
-margin-top:130px;
+height:80vh;
+margin-top:120px;
 }
 
 .overlay h1{
-font-size:38px;
+font-size:42px;
 }
 
 .overlay h2{
-font-size:28px;
+font-size:30px;
 }
 
 .overlay p{
 font-size:18px;
 }
 
-section{
-padding:60px 5%;
+.about{
+flex-direction:column;
+text-align:center;
+}
+
+.about-img img{
+max-width:100%;
+}
+
+.news-box{
+width:95%;
+}
+
+.gallery-grid{
+grid-template-columns:repeat(2,1fr);
 }
 
 .course-box{
-grid-template-columns:1fr;
+grid-template-columns:repeat(2,1fr);
+}
+
+.contact p{
+font-size:18px;
+}
+
+}
+
+/* ============ Mobile ============ */
+
+@media(max-width:768px){
+
+.hero{
+height:70vh;
+}
+
+.overlay h1{
+font-size:30px;
+}
+
+.overlay h2{
+font-size:22px;
+}
+
+.overlay p{
+font-size:16px;
+}
+
+.btn{
+padding:10px 20px;
+font-size:15px;
 }
 
 .gallery-grid{
 grid-template-columns:1fr;
 }
 
-.faculty-grid{
+.course-box{
 grid-template-columns:1fr;
 }
 
-.notice-box{
-padding:20px;
+section{
+padding:60px 20px;
 }
 
-.admission form{
-padding:20px;
+section h2{
+font-size:28px;
 }
 
-.map iframe{
-height:300px;
+.contact p{
+font-size:16px;
+}
+
+.logo img{
+width:60px;
+height:60px;
+}
+
+.logo h2{
+font-size:18px;
 }
 
 footer{
@@ -620,241 +623,25 @@ font-size:14px;
 
 }
 
-@media(max-width:500px){
+/* ============ Small Mobile ============ */
+
+@media(max-width:480px){
 
 .overlay h1{
-font-size:28px;
+font-size:24px;
 }
 
 .overlay h2{
-font-size:22px;
-}
-
-.btn{
-padding:12px 22px;
-font-size:15px;
-}
-
-section h2{
-font-size:28px;
-}
-
-.contact p{
 font-size:18px;
 }
 
-}
-/* Lightbox */
-
-.lightbox{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.9);
-justify-content:center;
-align-items:center;
-z-index:9999;
-}
-
-.lightbox-img{
-max-width:90%;
-max-height:90%;
-border-radius:10px;
-box-shadow:0 0 20px #fff;
-}
-
-.close{
-position:absolute;
-top:20px;
-right:35px;
-font-size:45px;
-color:white;
-cursor:pointer;
-font-weight:bold;
-}
-
-.gallery-grid img{
-cursor:pointer;
-transition:.3s;
-}
-
-.gallery-grid img:hover{
-transform:scale(1.05);
-}
-.hero{
-position:relative;
-height:100vh;
-overflow:hidden;
-}
-
-.slider{
-position:absolute;
-width:100%;
-height:100%;
-top:0;
-left:0;
-}
-
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-opacity:0;
-transition:opacity 1s ease-in-out;
-}
-
-.slide.active{
-opacity:1;
-}
-
-.overlay{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.45);
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-color:white;
-text-align:center;
-z-index:10;
-}
-
-.overlay h1{
-font-size:60px;
-}
-
-.overlay h2{
-font-size:42px;
-margin:15px 0;
-}
-
 .overlay p{
-font-size:22px;
+font-size:14px;
 }
 
 .btn{
-padding:12px 25px;
-background:#ff9800;
-color:#fff;
-text-decoration:none;
-border-radius:5px;
-margin-top:20px;
-}
-/* ===========================
-   Mobile Responsive
-=========================== */
-
-@media (max-width: 768px){
-
-header{
-    flex-direction:column;
-    padding:10px;
+padding:8px 16px;
+font-size:14px;
 }
 
-.logo{
-    flex-direction:column;
-    text-align:center;
-}
-
-.logo img{
-    width:70px;
-    height:70px;
-}
-
-nav ul{
-    flex-direction:column;
-    gap:12px;
-    margin-top:15px;
-    text-align:center;
-}
-
-.hero{
-    height:70vh;
-}
-
-.overlay h1{
-    font-size:30px;
-}
-
-.overlay h2{
-    font-size:22px;
-}
-
-.overlay p{
-    font-size:16px;
-}
-
-.btn{
-    padding:10px 18px;
-    font-size:15px;
-}
-
-.gallery-grid{
-    grid-template-columns:1fr;
-}
-
-.course-box{
-    grid-template-columns:1fr;
-}
-
-.contact{
-    padding:20px;
-}
-
-.notice-box{
-    width:95%;
-    margin:auto;
-}
-
-footer{
-    text-align:center;
-    font-size:14px;
-}
-
-}
-/* ===========================
-   Latest News
-=========================== */
-
-.news{
-    padding:60px 20px;
-    background:#f4f8ff;
-    text-align:center;
-}
-
-.news h2{
-    color:#003366;
-    margin-bottom:20px;
-    font-size:35px;
-}
-
-.news-box{
-    width:80%;
-    height:220px;
-    margin:auto;
-    background:#fff;
-    border-left:6px solid #ff9800;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-    overflow:hidden;
-    padding:15px;
-}
-
-.news-box marquee{
-    height:180px;
-}
-
-.news-box p{
-    font-size:18px;
-    color:#222;
-    padding:10px 0;
-    border-bottom:1px solid #ddd;
 }
