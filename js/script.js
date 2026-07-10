@@ -321,5 +321,24 @@ function slider() {
 }
 
 setInterval(slider, 3000);
+const noticeBoard = document.getElementById("noticeBoard");
 
+if(noticeBoard){
+
+const data = localStorage.getItem("collegeNotice");
+
+if(data){
+
+noticeBoard.innerHTML = data
+.split("\n")
+.map(n => `<p>📢 ${n}</p>`)
+.join("");
+
+}else{
+
+noticeBoard.innerHTML="<p>📢 No Notice Available</p>";
+
+}
+
+}
 // End
