@@ -2,7 +2,7 @@
    SHRI SHAKTI DEGREE COLLEGE
    STYLE.CSS - PART 1
 ========================================== */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 *{
     margin:0;
     padding:0;
@@ -14,10 +14,11 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f7fb;
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
     color:#222;
-    line-height:1.6;
+    line-height:1.7;
+    overflow-x:hidden;
 }
 
 /* ================= HEADER ================= */
@@ -27,13 +28,23 @@ header{
     top:0;
     left:0;
     width:100%;
-    background:#003b8f;
+    padding:18px 8%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 8%;
-    z-index:999;
-    box-shadow:0 3px 10px rgba(0,0,0,.2);
+
+    background:rgba(0,59,143,.85);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+    z-index:9999;
 }
 
 /* Logo */
@@ -74,17 +85,45 @@ nav ul{
     display:flex;
     gap:30px;
 }
-
 nav ul li a{
-    text-decoration:none;
     color:#fff;
+    text-decoration:none;
     font-size:17px;
-    font-weight:bold;
-    transition:.3s;
+    font-weight:600;
+    transition:.35s;
+    position:relative;
+}
+
+nav ul li a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-8px;
+
+width:0;
+
+height:3px;
+
+background:#ffd700;
+
+transition:.35s;
+
+}
+
+nav ul li a:hover::after{
+
+width:100%;
+
 }
 
 nav ul li a:hover{
-    color:#ffd700;
+
+color:#ffd700;
+
 }
 
 /* ================= HERO SLIDER ================= */
@@ -135,37 +174,18 @@ nav ul li a:hover{
     color:#fff;
     z-index:10;
 }
-
 .overlay h1{
-    font-size:60px;
-    letter-spacing:2px;
-}
 
-.overlay h2{
-    font-size:42px;
-    color:#ffd700;
-    margin:15px 0;
-}
+font-size:72px;
 
-.overlay p{
-    font-size:22px;
-}
+font-weight:800;
 
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 32px;
-    background:#ff9800;
-    color:#fff;
-    text-decoration:none;
-    border-radius:40px;
-    transition:.3s;
-}
+text-shadow:0 10px 30px rgba(0,0,0,.4);
 
-.btn:hover{
-    background:#fff;
-    color:#000;
-    transform:scale(1.05);
+letter-spacing:2px;
+
+animation:fadeUp 1s;
+
 }
 
 /* ================= COMMON SECTION ================= */
