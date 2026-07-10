@@ -64,6 +64,13 @@ header{
     background:#fff;
     padding:5px;
     object-fit:contain;
+   .logo-img{
+    transition:.4s;
+}
+
+.logo:hover .logo-img{
+    transform:rotate(8deg) scale(1.08);
+}
 }
 
 .logo-text h2{
@@ -76,6 +83,7 @@ header{
     color:#ddd;
     font-size:14px;
     margin-top:3px;
+   border-bottom:1px solid rgba(255,255,255,.12);
 }
 
 /* Navbar */
@@ -173,6 +181,9 @@ color:#ffd700;
     text-align:center;
     color:#fff;
     z-index:10;
+
+background:linear-gradient(rgba(0,36,99,.65),rgba(0,36,99,.65));
+
 }
 .overlay h1{
 
@@ -191,6 +202,20 @@ animation:fadeUp 1s;
 /* ================= COMMON SECTION ================= */
 
 section{
+   .about,
+.news,
+.gallery,
+.contact{
+
+background:#fff;
+
+border-radius:20px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+margin:40px auto;
+
+}
     padding:80px 8%;
 }
 
