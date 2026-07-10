@@ -304,6 +304,22 @@ document.body.classList.toggle("dark");
 
 };
 
+const slides = document.querySelectorAll(".slide");
 
+let current = 0;
+
+function slider() {
+    slides[current].classList.remove("active");
+
+    current++;
+
+    if (current >= slides.length) {
+        current = 0;
+    }
+
+    slides[current].classList.add("active");
+}
+
+setInterval(slider, 3000);
 
 // End
